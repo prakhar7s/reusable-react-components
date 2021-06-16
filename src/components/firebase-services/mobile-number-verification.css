@@ -2,23 +2,29 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-left: 40px;
+  justify-content: center;
+  padding-left: 4rem;
 }
 
-.mobile-num-verification form {
+.mobile-num-verification div {
   display: flex;
   justify-content: center;
-  margin: 20px;
+  align-items: center;
+  margin: 20px 0px;
 }
 
-.mobile-num-verification form input,
-.mobile-num-verification form button {
-  padding: 5px 10px;
+.mobile-num-verification div input,
+.mobile-num-verification div button {
+  padding: 10px 10px;
   margin-left: 20px;
   border: 1px solid rgba(0, 0, 0, 0.159);
 }
 
-.mobile-num-verification form button {
+#phone-num-inp {
+  margin: 0;
+}
+
+.mobile-num-verification div button {
   outline: none;
   padding: 10px;
   width: 100px;
@@ -33,6 +39,16 @@
   width: 80px;
 }
 
-.status-p {
-  margin-left: 40px;
+.loading {
+  width: 25px;
+  height: 25px;
+  border: 2px dashed blue;
+  border-radius: 50%;
+  animation: rotateLoader 0.8s infinite alternate-reverse;
+}
+
+@keyframes rotateLoader {
+  100% {
+    transform: rotate(360deg);
+  }
 }
