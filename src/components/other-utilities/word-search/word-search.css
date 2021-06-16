@@ -1,0 +1,26 @@
+.word-search-container {
+  width: 100%;
+  height: 100vh;
+  padding: 2rem 4rem;
+  background: rgba(158, 158, 158, 0.1);
+}
+
+.word-search {
+  height: 100%;
+  background: white;
+  box-shadow: rgb(0 0 0 / 10%) 0px 1px 2px, rgb(0 0 0 / 8%) 0px 2px 8px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+}
+
+.word-search header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+.word-search .words-container .highlight {
+  background: red;
+  color: white;
+}
