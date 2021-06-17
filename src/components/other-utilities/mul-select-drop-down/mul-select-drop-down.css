@@ -1,0 +1,14 @@
+.field-name {
+}
+
+.field-values {
+  background-color: red;
+  opacity: 10;
+}
+
+.field-name.has-dropdown:focus-within .dropdown {
+  background-color: green;
+}
+
+.field-name:focus-within {
+}
