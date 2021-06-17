@@ -10,17 +10,18 @@ const WordSearch = () => {
   );
 
   const [filteredParagraph, setFilteredParagraph] = useState(paragraph);
+  const [editMode, setEditMode] = useState(false);
 
   useEffect(() => {
-    console.log(searchInput);
+    setFilteredParagraph(paragraph);
+  }, [paragraph]);
 
-    const pattern = RegExp(searchInput);
-
+  useEffect(() => {
     setFilteredParagraph(
-      paragraph.replace(
-        pattern,
-        `<span class="highlight">${searchInput}</span>`
-      )
+      paragraph
+        .toLowerCase()
+        .split(searchInput.toLowerCase())
+        .join(`<span class="highlight">${searchInput}</span>`)
     );
   }, [searchInput]);
 
@@ -31,14 +32,33 @@ const WordSearch = () => {
           <input
             value={searchInput}
             onChange={(e) => setSearchInput(e.target.value)}
-            type="text"
+            type="search"
+            placeholder="Type something....."
           />
         </header>
 
-        <div className="words-container">
-          <div dangerouslySetInnerHTML={{ __html: filteredParagraph }} />
-        </div>
+        {!editMode && (
+          <div
+            className="words-container"
+            onClick={() => {
+              setEditMode(true);
+            }}
+          >
+            <div dangerouslySetInnerHTML={{ __html: filteredParagraph }} />
+          </div>
+        )}
+
+        {editMode && (
+          <textarea
+            value={paragraph}
+            onChange={(e) => setParagraph(e.target.value)}
+            type="text"
+            id="user-text"
+          ></textarea>
+        )}
       </div>
+
+      <button onClick={() => setEditMode(false)}>s</button>
     </div>
   );
 };
