@@ -1,14 +1,55 @@
-.field-name {
+.dropdown {
+  position: absolute;
+  width: 250px;
+  opacity: 0;
+  z-index: 2;
+  background: var(--bg-dropdown);
+  border-top: 2px solid var(--border-color);
+
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 250px;
+  margin-top: 2rem;
+  padding: 0.5rem;
+
+  box-shadow: rgba(2, 8, 20, 0.1) 0px 0.175em 0.5em;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+
+  transition: opacity 0.25s ease-out;
+  overflow: scroll;
+  overflow-x: hidden;
 }
 
-.field-values {
-  background-color: red;
-  opacity: 10;
+.dropdown {
+  display: flex;
+  list-style: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 }
 
-.field-name.has-dropdown:focus-within .dropdown {
-  background-color: green;
+.has-dropdown:focus-within .dropdown {
+  opacity: 1;
+  pointer-events: auto;
 }
 
-.field-name:focus-within {
+.dropdown-item {
+  cursor: pointer;
+  width: 100%;
+}
+
+.dropdown-item:not(:last-child) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+.dropdown-item a {
+  padding: 8px 5px;
+  display: block;
+  width: 200px;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
