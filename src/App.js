@@ -8,7 +8,11 @@ function App() {
     <div className="App">
       {/* <MobileNumberVerification /> */}
       {/* <WordSearch /> */}
-      <MulSelectDropDown />
+      <MulSelectDropDown
+        dropdownName="cities"
+        dropdownItems={["Mumbai", "Banglore", "Chennai", "Hydrabad"]}
+        howManySelects={3}
+      />
     </div>
   );
 }

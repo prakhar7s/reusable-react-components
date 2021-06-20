@@ -1,55 +1,102 @@
+.dropdown-menu-container {
+  width: 100px;
+  position: relative;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.dropdown-heading {
+  cursor: pointer;
+}
+.dropdown-header {
+  padding: 10px 0px;
+  margin-bottom: 10px;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-header input {
+  width: 100%;
+  padding: 6px 5px;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.dropdown-header input:focus {
+  border: 1px solid rgba(0, 0, 0, 0.4);
+}
+
 .dropdown {
   position: absolute;
-  width: 250px;
-  opacity: 0;
   z-index: 2;
-  background: var(--bg-dropdown);
-  border-top: 2px solid var(--border-color);
 
-  border-bottom-right-radius: 8px;
-  border-bottom-left-radius: 8px;
+  width: 250px;
+  background: white;
 
   display: flex;
   align-items: center;
   justify-content: space-around;
-  height: 250px;
-  margin-top: 2rem;
+  max-height: 250px;
+  left: 100px;
+  top: -15px;
   padding: 0.5rem;
 
-  box-shadow: rgba(2, 8, 20, 0.1) 0px 0.175em 0.5em;
-  border: 1px solid rgba(0, 0, 0, 0.3);
+  box-shadow: rgba(2, 8, 20, 0.25) 0px 0.175em 0.5em;
+  border: 1px solid rgba(0, 0, 0, 0.25);
 
-  transition: opacity 0.25s ease-out;
+  transition: display 0.95s ease-out;
   overflow: scroll;
   overflow-x: hidden;
-}
 
-.dropdown {
   display: flex;
   list-style: none;
   flex-direction: column;
   align-items: center;
+  /* background: red; */
   justify-content: flex-start;
 }
 
-.has-dropdown:focus-within .dropdown {
-  opacity: 1;
-  pointer-events: auto;
+.dropdown::-webkit-scrollbar {
+  width: 5px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.dropdown::-webkit-scrollbar-thumb {
+  background-color: rgb(0, 0, 0, 0.8);
 }
 
 .dropdown-item {
   cursor: pointer;
   width: 100%;
-}
-
-.dropdown-item:not(:last-child) {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
-}
-.dropdown-item a {
-  padding: 8px 5px;
-  display: block;
-  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 5px;
+  height: 38px;
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+.dropdown-item:not(:last-child) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.dropdown-item span {
+  width: 100%;
+  user-select: none;
+}
+
+.note-line {
+  text-align: center;
+  color: red;
+  font-size: 14px;
+  opacity: 0.8;
 }
