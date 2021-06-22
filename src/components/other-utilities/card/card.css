@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+.container {
+  background-color: #141a24;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: "Roboto", sans-serif;
+}
+
+.circles {
+  border-radius: 50%;
+}
+
+.circles:first-child {
+  position: absolute;
+  top: 40px;
+  left: 40%;
+  width: 20px;
+  height: 20px;
+  background-color: #6b6ffd;
+}
+
+.circles:nth-child(2) {
+  position: absolute;
+  top: 10%;
+  left: 90%;
+  width: 15px;
+  height: 15px;
+  background-color: #ce9c53;
+}
+
+.circles:nth-child(3) {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: rgb(35, 66, 112);
+}
+
+.circles:nth-child(4) {
+  position: absolute;
+  top: 50%;
+  left: 64%;
+  width: 55px;
+  height: 55px;
+  background-color: #f9709a;
+}
+
+.circles:nth-child(5) {
+  position: absolute;
+  top: 75%;
+  left: 42%;
+  width: 35px;
+  height: 35px;
+  background-color: #45bc9e;
+}
+
+.card {
+  width: 400px;
+  height: 250px;
+  background-color: rgb(32, 44, 62, 0.5);
+  backdrop-filter: blur(4px);
+  border: 2px solid rgba(255, 255, 255, 0.05);
+  border-radius: 5px;
+  color: white;
+  padding: 10px 20px;
+}
+
+.card .upper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 70px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.card .upper .dp-img {
+  width: 50px;
+  height: 50px;
+  position: relative;
+}
+
+.card .upper .dp-img img {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+}
+
+.name-username {
+  margin-left: 10px;
+}
+
+.name-username h2 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.name-username h4 {
+  font-size: 13px;
+  margin: 0;
+  margin-top: 3px;
+  opacity: 0.6;
+}
+
+.date {
+  opacity: 0.4;
+  margin-left: auto;
+}
+
+.content {
+  font-weight: 600;
+}
