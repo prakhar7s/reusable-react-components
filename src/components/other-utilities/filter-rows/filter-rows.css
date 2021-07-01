@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400&display=swap");
+
+:root {
+  --border-rad: 4px;
+}
+
+.mainContainer {
+  background: black;
+  height: 100vh;
+  padding: 0 20%;
+  font-family: "Source Sans Pro", sans-serif;
+  color: white;
+}
+
+select,
+input {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+@media (max-width: 600px) {
+  .mainContainer {
+    padding: 0 20px;
+  }
+}
+
+.filterContainer {
+  background: rgba(27, 107, 255, 0.1);
+  height: 100%;
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.searchHeader {
+  height: 80px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 30px;
+}
+
+.searchHeader input,
+.filter select {
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.1);
+  padding: 8px 10px;
+  color: white;
+  transition: 0.4s;
+  font-size: 15px;
+}
+
+.searchHeader input:focus,
+.filter select:focus {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.filter span {
+  font-size: 15px;
+  text-transform: uppercase;
+  opacity: 0.6;
+  margin-right: 10px;
+}
+
+.filter select {
+  width: 150px;
+}
+
+.filter option {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+#itemsTable {
+  width: 100%;
+}
+
+#itemsTable thead {
+  background-color: rgba(55, 55, 192, 0.5);
+}
+
+#itemsTable thead tr th {
+  text-transform: uppercase;
+}
+
+#itemsTable tbody tr {
+  background-color: #1c223b48;
+  transition: 0.4s;
+}
+
+#itemsTable tbody tr:hover {
+  background-color: #1c223be0;
+}
+
+#itemsTable tbody tr td:last-of-type {
+  border-top-right-radius: var(--border-rad);
+  border-bottom-right-radius: var(--border-rad);
+}
+#itemsTable tbody tr td:first-of-type {
+  border-top-left-radius: var(--border-rad);
+  border-bottom-left-radius: var(--border-rad);
+  border-left: var(--border-rad) solid transparent;
+}
+#itemsTable th,
+#itemsTable td {
+  padding: 15px 20px;
+  text-align: left;
+}
