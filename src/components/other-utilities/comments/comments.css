@@ -1,0 +1,69 @@
+.comments-container {
+  background-color: #dee1e3;
+  min-height: 100vh;
+  background-color: #0a468a;
+  background-image: linear-gradient(
+    180deg,
+    #2f6ed3 5%,
+    #5095e4 20%,
+    #5095e4 60%,
+    #2f6ed3 95%
+  );
+  padding: 10px;
+}
+
+.comment-wrapper {
+  max-width: 768px;
+  margin: 0px auto;
+  position: relative;
+}
+
+.comment-main {
+  padding: 10px 20px;
+
+  background: rgba(0, 0, 0, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.18);
+}
+
+.comment-main .comment-msg {
+  padding: 5px;
+}
+
+/* like animation */
+.heartAnimation {
+  display: inline-block;
+  width: 80px;
+  height: 100px;
+  background: url("https://cssanimation.rocks/images/posts/steps/heart.png");
+  background-position: 0 0;
+  cursor: pointer;
+  transition: background-position 1s steps(28);
+  transition-duration: 0s;
+}
+
+.heartAnimation.active {
+  transition-duration: 1s;
+  background-position: -2800px 0;
+}
+
+.comment-wrapper .comment-lower-part {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+}
+
+.comment-lower-part .likes {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.comment-wrapper .comment-replies {
+  margin-left: 20px;
+  border-left: 1px solid black;
+}

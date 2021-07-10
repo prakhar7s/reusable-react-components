@@ -1,5 +1,6 @@
 import "./App.css";
-import FirebaseTesting from "./components/firebase-testing/FirebaseTesting";
+import Comments from "./components/other-utilities/comments/comments";
+// import FirebaseTesting from "./components/firebase-testing/FirebaseTesting";
 // import NewNotifications from "./components/other-utilities/new-notifications/NewNotifications";
 // import Card from "./components/other-utilities/card/card";
 // import CircularProgressBar from "./components/other-utilities/circular-progress-bar/circular-progress-bar";
@@ -24,7 +25,9 @@ function App() {
       {/* <CircularProgressBar /> */}
       {/* <FilterRows /> */}
       {/* <NewNotifications /> */}
-      <FirebaseTesting />
+      {/* <FirebaseTesting /> */}
+
+      <Comments />
     </div>
   );
 }
