@@ -1,5 +1,6 @@
 import "./App.css";
-import Comments from "./components/other-utilities/comments/comments";
+// import Comments from "./components/other-utilities/comments/comments";
+import WallClock from "./components/other-utilities/wall-clock/WallClock";
 // import FirebaseTesting from "./components/firebase-testing/FirebaseTesting";
 // import NewNotifications from "./components/other-utilities/new-notifications/NewNotifications";
 // import Card from "./components/other-utilities/card/card";
@@ -27,7 +28,8 @@ function App() {
       {/* <NewNotifications /> */}
       {/* <FirebaseTesting /> */}
 
-      <Comments />
+      {/* <Comments /> */}
+      <WallClock />
     </div>
   );
 }
